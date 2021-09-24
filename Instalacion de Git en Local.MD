@@ -53,4 +53,4 @@ Para ser más eficientes podemos combinar ambos comandos en uno solo:
 
 Para confirmar que se ha instalado Git correctamente, utilizamos git --version de nuevo y nos deberia salir algo como esto:
 
-![2.1.1]()
+![2.1.1](img/Instalación de Git/2.1.1.png)
