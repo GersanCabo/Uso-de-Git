@@ -110,6 +110,8 @@ Y, por último, comprobamos que está instalada la versión:
 
 ![3.6.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20Git/3.5.1.png)
 
+<br>
+
 ## 4. Configurar Git
 Después de instalar la versión más reciente de Git, configuramos la herramienta para que tenga un correcto funcionamiento y tardemos menos tiempo en realizar ciertas acciones.
 
