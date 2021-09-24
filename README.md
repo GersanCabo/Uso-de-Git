@@ -1,5 +1,9 @@
-# Uso de Git
-En este repositorio abordare como se instala, configura y usa Git.
+# ¡Hola Mundo! :wave:
+En este repositorio abordo como se instala, configura y usa Git.
+
+Consta de varios documentos y he intentado (y creo que lo he conseguido) explicar todo el proceso de la manera más sencilla posible.
+
+¡Espero que os sea útil!
 
 
 # Indice
