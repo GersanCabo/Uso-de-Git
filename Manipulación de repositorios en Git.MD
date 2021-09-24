@@ -31,6 +31,8 @@ Podemos comprobar estas configuraciones con git config --list
 
 ![1.1.2](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Manipulaci%C3%B3n%20de%20repositorios%20en%20Git/1.1.2.png)
 
+<br>
+
 ## 2. Creación de un repositorio
 Vamos a crear un repositorio al que llamaremos dpl, para ello primero creamos la carpeta, luego nos ubicamos en ella y, por último, iniciamos el repositorio:
 
@@ -49,6 +51,8 @@ ls -la
 ![2.1.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Manipulaci%C3%B3n%20de%20repositorios%20en%20Git/2.1.1.png)
 
 Como podemos ver, en el repositorio se ha creado una carpeta oculta con los archivos que necesita git.
+
+<br>
 
 ## 3. Comprobar el estado del repositorio
 Podemos comprobar el estado del repositorio con git status:
@@ -81,6 +85,8 @@ Si volvemos a hacer un git status, comprobaremos que ha cambiado su estado:
 
 ![3.1.4](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Manipulaci%C3%B3n%20de%20repositorios%20en%20Git/3.1.4.png)
 
+<br>
+
 ## 4. Realizando commit’s
 Después de hacer el git add, debemos realizar un git commit para terminar de subir los cambios al repositorio, además, podremos añadir un comentario junto al commit, el cual quedará registrado en el repositorio.
 
@@ -91,6 +97,8 @@ git commit -m “Añadido índice de la asignatura DPL”
 Si volvemos a hacer un git status, veremos que ya no tenemos ningún archivo pendiente.
 
 ![4.1.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Manipulaci%C3%B3n%20de%20repositorios%20en%20Git/4.1.1.png)
+
+<br>
 
 ## 5. Modificación de ficheros
 Ahora probaremos a modificar un fichero para ver otra de las características de git, el git diff, el cual nos permitirá comparar los nuevos cambios con la versión que tenemos en el repositorio. Para empezar, modificamos el archivo indice.txt:
@@ -110,6 +118,8 @@ Como podemos ver, con git diff se nos muestra los archivos que han sido modifica
 Para finalizar, añadimos los cambios al repositorio:
 
 ![5.1.3](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Manipulaci%C3%B3n%20de%20repositorios%20en%20Git/5.1.3.png)
+
+<br>
 
 ## 6. Historial
 Por último, mostraremos otro comando importante de Git, el git show, el cual nos mostrará los cambios de la última versión del repositorio respecto a la anterior.
