@@ -32,7 +32,9 @@
 
 Para ello colocamos el siguiente comando en la terminal:
 
-> git --version
+```
+git --version
+```
 
 Si nos responde con la versión de Git, significa que lo tenemos instalado, si estamos desactualizados o no lo tenemos instalado, seguimos con los pasos.
 
