@@ -54,3 +54,10 @@ Para ser más eficientes podemos combinar ambos comandos en uno solo:
 Para confirmar que se ha instalado Git correctamente, utilizamos git --version de nuevo y nos deberia salir algo como esto:
 
 ![2.1.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20Git/2.1.1.png)
+
+<br>
+
+## 3. Instalar Git (mediante el sitio web de Git)
+Como se nos pide instalar la versión 2.29.3 (o posterior) y, a día de hoy, en los repositorios de Canonical la última versión es la 2.25.1, procedemos a realizar la instalación de esta otra forma.
+
+#### 3.1. Instalamos dependencias
