@@ -60,4 +60,10 @@ Para confirmar que se ha instalado Git correctamente, utilizamos git --version d
 ## 3. Instalar Git (mediante el sitio web de Git)
 Como se nos pide instalar la versión 2.29.3 (o posterior) y, a día de hoy, en los repositorios de Canonical la última versión es la 2.25.1, procedemos a realizar la instalación de esta otra forma.
 
-#### 3.1. Instalamos dependencias
+### 3.1. Instalamos dependencias
+Aunque hemos instalado Git anteriormente, intentamos instalar las dependencias por si acaso tenemos alguna desactualizada o por si se han añadido nuevas en esta última versión. El comando sería el siguiente:
+
+> sudo apt update && sudo apt install libz-dev libssl-dev libcurl4-gnutls-dev libexpat1-dev gettext cmake gcc
+
+### 3.2. Creamos un directorio temporal
+Una vez instaladas las dependencias, creamos un directorio temporal donde poder albergar el paquete de instalación de Git mientras lo necesitemos. Pongo un ejemplo de este proceso:
