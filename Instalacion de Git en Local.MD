@@ -49,7 +49,9 @@ sudo apt update
 
 Luego de esto ya podemos instalar Git:
 
+```
 sudo apt install git
+```
 
 Para ser más eficientes podemos combinar ambos comandos en uno solo:
 
