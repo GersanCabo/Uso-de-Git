@@ -5,14 +5,14 @@
 ## Indice
 
 1. <a href="#ejercicio-1">**Ejercicio 1**</a>
-2. <a href="#Ejercicio 2">**Ejercicio 2**</a>
-3. <a href="#Ejercicio 3">**Ejercicio 3**</a>
-4. <a href="#Ejercicio 4">**Ejercicio 4**</a>
-5. <a href="#Ejercicio 5">**Ejercicio 5**</a>
-6. <a href="#Ejercicio 6">**Ejercicio 6**</a>
-7. <a href="#Ejercicio 7">**Ejercicio 7**</a>
-8. <a href="#Ejercicio 8">**Ejercicio 8**</a>
-9. <a href="#Ejercicio 9">**Ejercicio 9**</a>
+2. <a href="#ejercicio-2">**Ejercicio 2**</a>
+3. <a href="#ejercicio-3">**Ejercicio 3**</a>
+4. <a href="#ejercicio-4">**Ejercicio 4**</a>
+5. <a href="#ejercicio-5">**Ejercicio 5**</a>
+6. <a href="#ejercicio-6">**Ejercicio 6**</a>
+7. <a href="#ejercicio-7">**Ejercicio 7**</a>
+8. <a href="#ejercicio-8">**Ejercicio 8**</a>
+9. <a href="#ejercicio-9">**Ejercicio 9**</a>
 
 <br>
 
