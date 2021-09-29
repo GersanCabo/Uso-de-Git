@@ -4,7 +4,7 @@
 
 ## Indice
 
-1. **Comprobar la instalación de Git**
+1. <a href="#1-comprobar-la-instalación-de-git">**Comprobar la instalación de Git**</a>
 2. **Instalar Git (mediante repositorio de Ubuntu)**
 3. **Instalar git (mediante el sitio web de Git)**
 
