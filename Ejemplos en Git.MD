@@ -20,7 +20,7 @@
 
 **● Mostrar el historial de cambios del repositorio.**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Lo hacemos con el comando git log
+&nbsp;&nbsp;&nbsp;&nbsp;Lo hacemos con el comando *git log*
 
 &nbsp;&nbsp;&nbsp;&nbsp;![1.1..1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/1.1.1.png)
 
@@ -143,3 +143,213 @@ git diff codigoHashPrimeraVersion..HEAD
 &nbsp;&nbsp;&nbsp;&nbsp;Y la salida debería ser algo así:
 
 &nbsp;&nbsp;&nbsp;&nbsp;![3.4.2](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/3.4.2.png)
+
+<br>
+
+## Ejercicio 4
+
+**● Añadir al final del fichero indice.txt la siguiente línea:**
+
+> Capítulo 5: Conceptos avanzados
+
+Como no existe ningún indice.txt, lo realizaremos en el README.md:
+
+![4.1.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/4.1.1.png)
+
+**● Añadir los cambios a la zona de intercambio temporal.**
+
+Lo realizamos:
+
+![1.3.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/1.3.1.png)
+
+**● Hacer un commit de los cambios con el mensaje Añadidocapítulo 5 al índice.**
+
+Realizamos el commit con el mensaje:
+
+![4.1.3](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/4.1.3.png)
+
+**● Mostrar quién ha hecho cambios sobre el fichero indice.txt.**
+
+Para ver qué personas han realizado cambios sobre indice.txt, debemos utilizar el siguiente comando:
+
+```
+git annotatenombreArchivo
+```
+
+En nuestro caso esta será la respuesta:
+
+![4.1.4](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/4.1.4.png)
+
+<br>
+
+## Ejercicio 5
+
+**● Crear una nueva rama bibliografía y mostrar las ramas del repositorio.**
+
+Para hacer trabajar con ramas debemos usar el siguiente comando:
+
+```
+git branch
+```
+
+Y para crear una rama debemos usar ese comando seguido del nombre de la rama:
+
+```
+git branchNombreRama
+```
+
+Nos quedaría tal que así:
+
+![5.1.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/5.1.1.png)
+
+Y si queremos ver todas nuestras ramas, usamos otra vez el comando anterior pero seguido de -av:
+
+![5.1.2](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/5.1.2.png)
+
+## Ejercicio 6
+
+**● Crear el fichero capitulos/capitulo4.txt y añadir el texto siguiente:**
+
+En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
+
+Nos ubicamos en la carpeta capítulos y creamos el archivo usando nano:
+
+![6.1.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/6.1.1.png)
+
+**● Añadir los cambios a la zona de intercambio temporal.**
+
+Volvemos a utilizar “git add .”, como en los ejercicios anteriores.
+
+![1.3.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/1.3.1.png)
+
+**● Hacer un commit con el mensaje “Añadido capítulo 4.”**
+
+Hacemos el commit para subir los cambios:
+
+![6.1.3](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/6.1.3.png)
+
+**● Mostrar la historia del repositorio incluyendo todas las ramas.**
+
+Para esto utilizaremos el comando *git log*, pero incluyendo algunos extras:
+
+```
+git log --graph --all --oneline
+```
+
+Con esto nos saldrán los cambios realizados en todas las ramas:
+
+![6.1.4](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/6.1.4.png)
+
+Como podemos ver, este último cambio lo hemos realizado en la rama main.
+
+<br>
+
+## Ejercicio 7
+
+**● Cambiar a la rama bibliografia.**
+
+Para cambiar entre ramas utilizamos el siguiente comando:
+
+```
+git checkoutnombreRama
+```
+
+Este sería el resultado:
+
+![7.1.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/7.1.1.png)
+
+**● Crear el fichero bibliografia.txt y añadir la siguiente referencia:**
+
+> Chacon, S. and Straub, B. Pro Git. Apress.
+
+Nos situamos en la carpeta libros y creamos el fichero con nano:
+
+![7.1.2](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/7.1.2.png)
+
+**● Añadir los cambios a la zona de intercambio temporal.**
+
+Realizamos de nuevo un *git add .* :
+
+![1.3.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/1.3.1.png)
+
+**● Hacer un commit con el mensaje “Añadida primera referencia bibliográfica.”**
+
+Realizamos el commit con el mensaje dicho:
+
+![7.1.4](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/7.1.4.png)
+
+**● Mostrar la historia del repositorio incluyendo todas las ramas.**
+
+Utilizamos el comando *git log* con los extras que hemos usado anteriormente:
+
+![7.1.5](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/7.1.5.png)
+
+Como podemos ver, el último commit se ha realizado sobre la rama bibliografía, la cual, debido a esto, está adelantada respecto a la rama main.
+
+## Ejercicio 8
+
+**● Fusionar la rama bibliografia con la rama master.**
+
+Primero debemos situarnos en la rama main. Para esto usamos el *git checkout*:
+
+![8.1.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/8.1.1.png)
+
+Una vez aquí, realizamos la fusión de la rama bibliografía con la rama main de la siguiente manera:
+
+```
+git merge nombreRama
+```
+
+En nuestro caso quedaría tal que así:
+
+![8.1.2](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/8.1.2.png)
+
+**● Mostrar la historia del repositorio incluyendo todas las ramas.**
+
+Volvemos a utilizar el comando que ya hemos usado en otros ejercicios:
+
+![8.2.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/8.2.1.png)
+
+Como podemos ver se representa la fusión de la rama bibliografía con la rama main.
+
+**● Eliminar la rama bibliografia.**
+
+Ahora que ya hemos fusionado la rama bibliografía con la rama main, no necesitamos que siga existiendo la rama bibliografía.
+
+La eliminamos de la siguiente manera:
+
+```
+git  branch -d nombreRama
+```
+
+Y nos mostraría esto:
+
+![8.3.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/8.3.1.png)
+
+**● Mostrar de nuevo la historia del repositorio incluyendo todas las ramas.**
+
+Utilizamos el mismo comando del apartado 2:
+
+![8.4.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/8.4.1.png)
+
+La respuesta a este comando es la misma que nos dio antes, esto es debido a que, aunque eliminemos la rama, el git log nos seguirá mostrando el recorrido que tuvo y su historia.
+
+## Ejercicio 9
+
+**● Crear la rama bibliografia.**
+
+La creamos utilizando *git branch nombreRama*:
+
+![9.1.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.1.1.png)
+
+**● Cambiar a la rama bibliografia.**
+
+Lo haremos utilizando *git checkout nombreRama*:
+
+![9.1.2](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.1.2.png)
+
+**● Cambiar el fichero bibliografia.txt para que contenga las siguientes referencias:**
+
+Lo editamos con nano:
+
+![9.1.3](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.1.2.png)
