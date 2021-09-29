@@ -5,8 +5,8 @@
 ## Indice
 
 1. <a href="#1-comprobar-la-instalación-de-git">**Comprobar la instalación de Git**</a>
-2. **Instalar Git (mediante repositorio de Ubuntu)**
-3. **Instalar git (mediante el sitio web de Git)**
+2. <a href="#2-instalar-git-(mediante-repositorio-de-ubuntu)">**Instalar Git (mediante repositorio de Ubuntu)**</a>
+3. <a href="#3-instalar-git-(mediante-el-sitio-web-de-git)">**Instalar git (mediante el sitio web de Git)**</a>
 
     3.1. Instalamos dependencias
     
