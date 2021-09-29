@@ -5,12 +5,12 @@
 
 ## Indice
 
-1. **Configuración inicial**
-2. **Creación de un repositorio**
-3. **Comprobar el estado del repositorio**
-4. **Realizando commit’s**
-5. **Modificación de ficheros**
-6. **Historial**
+1. <a href="#1-configuración-inicial">**Configuración inicial**</a>
+2. <a href="#2-creación-de-un-repositorio">**Creación de un repositorio**</a>
+3. <a href="#3-comprobar-el-estado-del-repositorio">**Comprobar el estado del repositorio**</a>
+4. <a href="#4-realizando-commits">**Realizando commit’s**</a>
+5. <a href="#5-modificación-de-ficheros">**Modificación de ficheros**</a>
+6. <a href="#6-historial">**Historial**</a>
 
 <br>
 
