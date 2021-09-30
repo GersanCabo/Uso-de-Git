@@ -346,10 +346,69 @@ La creamos utilizando *git branch nombreRama*:
 
 Lo haremos utilizando *git checkout nombreRama*:
 
-![9.1.2](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.1.2.png)
+![9.2.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.2.1.png)
 
 **● Cambiar el fichero bibliografia.txt para que contenga las siguientes referencias:**
 
 Lo editamos con nano:
 
-![9.1.3](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.1.2.png)
+![9.3.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.3.1.png)
+
+Subimos estos cambios para poder cambiar de rama después:
+
+![9.3.2](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.3.1.png)
+
+**● Cambiar a la rama master.**
+
+Volvemos a utilizar git checkout nombreRama:
+
+![9.4.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.4.1.png)
+
+Como podemos ver, nos avisa de que el main está adelantado a la rama remota por 7 commits.
+
+**● Cambiar el fichero bibliografia.txt para que - contenga las siguientes referencias:**
+
+> Chacon, S. and Straub, B. Pro Git. Apress.
+> Loeliger, J. and McCullough, M. Version control with Git. O’Reilly.
+
+Volvemos a utilizar nano:
+
+![9.5.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.5.1.png)
+
+**● Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Añadida nueva referencia bibliográfica.”**
+
+Realizamos un *git add .* y, luego, un *git commit -m“mensaje”*:
+
+![9.6.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.6.1.png)
+
+**● Fusionar la rama bibliografia con la rama master.**
+
+Para esto utilizaremos el comando *git merge nombreRama* estando en la rama main:
+
+![9.7.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.7.1.png)
+
+Como podemos ver se nos avisa de un conflicto en el fichero bibliografia.txt, el cual debemos solucionar a mano para completar la fusión.
+
+**● Resolver el conflicto dejando el fichero bibliografia.txt con las referencias:**
+
+> Chacon, S. and Straub, B. Pro Git. Apress.
+> Loeliger, J. and McCullough, M. Version control with Git. O’Reilly.
+> Hodson, R. Ry’s Git Tutorial. Smashwords (2014)
+
+Realizamos estos cambios para solucionar el conflicto, podemos editar el fichero con nano:
+
+![9.8.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.8.1.png)
+
+**● Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Resuelto conflicto de bibliografía.”**
+
+Realizamos los dos comandos pertinentes:
+
+![9.9.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.9.1.png)
+
+**● Mostrar la historia del repositorio incluyendo todas las ramas.**
+
+Realizamos el comando *git log --graph --all --oneline*:
+
+![9.10.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Ejemplos%20en%20Git/9.10.1.png)
+
+Como podemos ver, se nos muestran todos los commits y fusiones realizados en todas la ramas.
