@@ -1,12 +1,19 @@
 ## Indice
 
 Inicializar un repositorio
+
 Añadir README.md y primer commit
+
 Crear una rama:
+
 Moverse a una rama y crear hola.html:
+
 Moverse a la rama principal y crear adios.html:
+
 Realizar la mezcla:
+
 Subir los cambios:
+
 Muestra todos los cambios:
 
 ## Inicializar un repositorio
