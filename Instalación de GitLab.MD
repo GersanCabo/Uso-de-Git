@@ -46,7 +46,7 @@ que nos da el equipo de GitLab:
 curl - s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
 ```
 
-![2.3.1](![2.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/instalacion%20de%20GitLab/2.3.1.png))
+![2.3.1](![2.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/instalacion%20de%20GitLab/2.3.1.png)
 
 Luego de esto, ya podremos instalar GitLab:
 
