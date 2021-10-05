@@ -1,10 +1,10 @@
 ## Indice
 
-- 1. Requisitos previos:
-- 2. Pasos para realizar la instalación en local:
+1. <a href="#1-requisitos-previos">Requisitos previos:</a>
+2. <a href="#2-pasos-para-realizar-la-instalación-en-local">Pasos para realizar la instalación en local:</a>
    - 2.1 Actualización de los repositorios:
    - 2.2 Instalación de Apache:
-- 3. Acceso:
+3. <a href="#3-acceso">Acceso:</a>
 
 
 ## 1. Requisitos previos:
