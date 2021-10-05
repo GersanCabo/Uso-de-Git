@@ -1,5 +1,5 @@
 # ¡Hola Mundo! :wave:
-En este repositorio abordo como se instala, configura y usa Git.
+En este repositorio abordo como se instala, configura y usa Git + tecnologias relacionadas.
 
 Consta de varios documentos y he intentado explicar todo de la manera más sencilla posible.
 
