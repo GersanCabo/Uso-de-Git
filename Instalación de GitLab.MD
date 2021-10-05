@@ -1,4 +1,4 @@
-# IES Puerto de la Cruz Telesforo Bravo
+# Instalación de GitLab
 
 ## Indice
 
