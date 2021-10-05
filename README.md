@@ -13,3 +13,5 @@ Consta de varios documentos y he intentado explicar todo de la manera más senci
 ### [2. Manipulación de repositorios en Git](https://github.com/GersanCabo/Uso-de-Git/blob/main/Manipulaci%C3%B3n%20de%20repositorios%20en%20Git.MD)
 
 ### [3. Ejemplos en Git](https://github.com/GersanCabo/Uso-de-Git/blob/main/Ejemplos%20en%20Git.MD)
+
+### [4. Instalación de GitLab](https://github.com/GersanCabo/Uso-de-Git/blob/main/Instalaci%C3%B3n%20de%20GitLab.MD)
