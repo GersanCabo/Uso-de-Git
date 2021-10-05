@@ -46,7 +46,7 @@ que nos da el equipo de GitLab:
 curl - s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
 ```
 
-![2.3.1]((https://github.com/GersanCabo/Uso-de-Git/blob/main/img/instalacion%20de%20GitLab/2.3.1.png)
+![2.3.1](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/instalacion%20de%20GitLab/2.3.1.png)
 
 Luego de esto, ya podremos instalar GitLab:
 
@@ -54,7 +54,7 @@ Luego de esto, ya podremos instalar GitLab:
 sudo apt install gitlab-ce
 ```
 
-![2.3.2]((https://github.com/GersanCabo/Uso-de-Git/blob/main/img/instalacion%20de%20GitLab/2.3.2.png)
+![2.3.2](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/instalacion%20de%20GitLab/2.3.2.png)
 
 Para terminar, ejecutamos el siguiente comando para terminar la configuración y esperamosa que termine:
 
@@ -62,7 +62,7 @@ Para terminar, ejecutamos el siguiente comando para terminar la configuración y
 sudo gitlab-ctl reconfigure
 ```
 
-![2.3.3]((https://github.com/GersanCabo/Uso-de-Git/blob/main/img/instalacion%20de%20GitLab/2.3.3.png)
+![2.3.3](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/instalacion%20de%20GitLab/2.3.3.png)
 
 ### 2.4 Acceso
 
