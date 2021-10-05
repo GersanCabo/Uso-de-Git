@@ -90,4 +90,4 @@ sudo systemctl status apache2
 Para comprobar si el servicio se está ejecutando correctamente colocamos en el navegador
 la dirección **localhost: 8081** y debería mostrarnos la siguiente página:
 
-![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20Apache/2.3.1.png)
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20Apache/3.1.1.png)
