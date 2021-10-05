@@ -2,8 +2,8 @@
 
 ## Indice
 
-- 1. Requisitos previos:
-- 2. Pasos para realizar la instalación en local:
+1. Requisitos previos:
+2. Pasos para realizar la instalación en local:
    - 2.1 Actualización de los repositorios:
    - 2.2 Instalación de paquetes adiciones2.3 Instalación de GitLab
    - 2.4 Acceso
