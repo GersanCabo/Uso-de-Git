@@ -102,3 +102,23 @@ WantedBy=multi-user.target
 ```
     sudo systemctl enable tomcat 10
 ```
+
+## 3. Acceso a Apache-Tomcat:
+
+Como ya hemos instalado anteriormente el Apache y el GitLab, tenemos ocupado el puerto 8080, con lo que entramos al server.xml ubicado en /opt/tomcat/apache-tomcat-xx.x.xx/conf para cambiar el puerto por defecto por el que conecta el Tomcat.
+
+Encontraremos algo así:
+
+Y debemos cambiarlo a esto:
+
+Y reiniciamos el servicio:
+
+Ahora solo nos quedaría verificar que está corriendo Tomcat en el puerto 8083, para ello entramos a la barra de dirección del navegador y colocamos lo siguiente en la dirección:
+
+```
+localhost:8083 
+    o
+nuestraIP:8083
+```
+
+Y nos deberia salir una página de inicio como esta:
