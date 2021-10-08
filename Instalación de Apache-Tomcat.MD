@@ -16,6 +16,11 @@ Necesitaremos:
 - Cuenta de superusuario root
 - Tener Java instalado (Lo podemos comprobar con java-version)
 
+
+   ![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/1.1.1.png)
+
+
+
 ## 2. Pasos para realizar la instalación en local:
 
 ### 2.1 Actualización de los repositorios
@@ -25,6 +30,11 @@ Antes de instalar el Tomcat debemos asegurarnos de que nuestro sistema y nuestro
 ```
 sudo apt update && sudo apt upgrade
 ```
+
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.1.1.png)
+
+
 
 ### 2.2 Instalación de Apache-Tomcat
 
@@ -36,11 +46,21 @@ Lo instalamos desde línea de comandos de la siguiente manera:
 wget https://downloads.apache.org/tomcat/tomcat- 10 /v 10. 0. 12 /bin/apache-tomcat- 10. 0. 12 .tar.gz
 ```
 
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.2.1.png)
+
+
+
 - Creamos el nuevo usuario para Tomcat:
 
 ```
     sudo useradd - U - m - d /opt/tomcat - k /dev/null - s /bin/false tomcat
 ```
+
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.2.2.png)
+
+
 
 - Descomprimimos el paquete que acabamos de descargar en una ubicación lógica:
 
@@ -48,11 +68,21 @@ wget https://downloads.apache.org/tomcat/tomcat- 10 /v 10. 0. 12 /bin/apache-tom
     sudo tar xf apache-tomcat- 10. 0. 12 .tar.gz - C /opt/tomcat/
 ```
 
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.2.3.png)
+
+
+
 - Le damos la propiedad de los archivos de Tomcat al usuario tomcat:
 
 ```
     sudo chown - R tomcat: /opt/tomcat/
 ```
+
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.2.4.png)
+
+
 
 - Creamos un enlace simbólico para ignorar el número de versión que está en elnombre de la carpeta del Tomcat y facilitarnos la instalación y la configuración:
 
@@ -60,11 +90,21 @@ wget https://downloads.apache.org/tomcat/tomcat- 10 /v 10. 0. 12 /bin/apache-tom
    sudo ln - s /opt/tomcat/apache-tomcat- 10. 0. 12 / /opt/tomcat/apache-tomcat
 ```
 
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.2.5.png)
+
+
+
 - Ahora creamos un archivo de unidad para Systemd antes de empezar a configurar y,finalmente, iniciar el servicio:
 
 ```
    sudo nano /etc/systemd/system/tomcat 10 .service
 ```
+
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.2.6.png)
+
+
 
 Y copiamos lo siguiente:
 
@@ -87,21 +127,41 @@ ExecStop=/opt/tomcat/apache-tomcat/bin/shutdown.sh
 WantedBy=multi-user.target
 ```
 
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.2.7.png)
+
+
+
 - Iniciar el servicio:
 
 ```
     sudo systemctl start tomcat 10
 ```
 
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.2.8.png)
+
+
+
 - Verificamos el estado del servicio:
 ```
     systemctl status tomcat 10
 ```
 
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.2.9.png)
+
+
+
 - Activamos el inicio automático en el arranque:
 ```
     sudo systemctl enable tomcat 10
 ```
+
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/2.2.10.png)
+
+
 
 ## 3. Acceso a Apache-Tomcat:
 
@@ -109,9 +169,24 @@ Como ya hemos instalado anteriormente el Apache y el GitLab, tenemos ocupado el 
 
 Encontraremos algo así:
 
+
+![Connector port = 8080](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/3.1.1.png)
+
+
+
 Y debemos cambiarlo a esto:
 
+
+![Connector port = 8083](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/3.1.2.png)
+
+
+
 Y reiniciamos el servicio:
+
+
+![sudo systemctl restart tomcat10](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/3.1.3.png)
+
+
 
 Ahora solo nos quedaría verificar que está corriendo Tomcat en el puerto 8083, para ello entramos a la barra de dirección del navegador y colocamos lo siguiente en la dirección:
 
@@ -121,4 +196,8 @@ localhost:8083
 nuestraIP:8083
 ```
 
+
 Y nos deberia salir una página de inicio como esta:
+
+
+![Pagina de inicio de Tomcat](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalaci%C3%B3n%20de%20TomCat/3.1.4.png)
