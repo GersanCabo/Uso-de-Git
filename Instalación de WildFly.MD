@@ -15,7 +15,7 @@
 
 Necesitaremos:
 
-- Un servidor Ubuntu 20.
+- Un servidor Ubuntu 20.04
 
   ![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/1.1.1.png)
 
@@ -154,6 +154,8 @@ Para ello debemos acceder al fichero donde se declara el puerto de entrada:
 sudo nano /opt/wildfly/standalone/configuration/standalone.xml
 ```
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/3.1.1.png)
+
 Y cambiar la siguiente sentencia:
 
 ```
@@ -166,12 +168,15 @@ Por esta:
 <socket-binding name="http" port="${jboss.http.port: 8084 }"/>
 ```
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/3.1.2.png)
 
 Y le decimos al firewall que permita el tráfico desde el puerto 8084:
 
 ```
 sudo ufw allow 8084 /tcp
 ```
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/3.1.3.png)
 
 ## 4. Acceso a WildFly:
 
@@ -181,6 +186,8 @@ Tan solo tendremos que colocar en el navegador lo siguiente:
 http://localhost/8084
 ```
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/4.1.1.png)
+
 ## 5. Añadir usuarios:
 
 Primero creamos al usuario administrador ejecutando el siguiente script:
@@ -189,9 +196,15 @@ Primero creamos al usuario administrador ejecutando el siguiente script:
 sudo /opt/wildfly/bin/add-user.sh
 ```
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/5.1.1.png)
+
 Seleccionamos la opción a:
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/5.1.2.png)
+
 Y seguimos las indicaciones del script:
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/5.1.3.png)
 
 ## 6. Gestionar la consola en remoto:
 
@@ -207,6 +220,8 @@ Y debemos añadir esta línea:
 WILDFLY_CONSOLE_BIND= 0. 0. 0. 0
 ```
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/6.1.1.png)
+
 Luego entramos a este otro fichero y verificamos que se encuentren estas líneas:
 
 ```
@@ -218,6 +233,9 @@ $WILDFLY_HOME/bin/domain.sh - c $ 2 - b $ 3 - bmanagement $ 4
 else
 $WILDFLY_HOME/bin/standalone.sh - c $ 2 - b $ 3 - bmanagement $ 4
 ```
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/6.1.2.png)
+
 Y reiniciamos el servicio para que se vuelva a iniciar con los cambios realizados:
 
 ```
@@ -232,12 +250,16 @@ ExecStart=/opt/wildfly/bin/launch.sh $WILDFLY_MODE $WILDFLY_CONFIG $WILDFLY_BIND
 $WILDFLY_CONSOLE_BIND
 ```
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/6.1.3.png)
+
 Reiniciamos el demonio y el servicio:
 
 ```
 sudo systemctl daemon-reload
 sudo systemctl restart wildfly
 ```
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/6.1.4.png)
 
 Si queremos también podemos habilitar el acceso remoto a la consola de administraciónmodificando estas líneas en el fichero standalone.xml:
 
