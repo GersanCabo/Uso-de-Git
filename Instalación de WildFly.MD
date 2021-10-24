@@ -143,3 +143,114 @@ wget https://github.com/wildfly/wildfly/releases/download/ 25. 0. 0 .Final/wildf
   ```
   
   ![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/Instalacion%20Wildfly/2.2.11.png)
+
+## 3. Configuración de WildFly:
+
+Tenemos que permitir el tráfico por algún puerto, en nuestro caso usaremos el puerto 8084.
+
+Para ello debemos acceder al fichero donde se declara el puerto de entrada:
+
+```
+sudo nano /opt/wildfly/standalone/configuration/standalone.xml
+```
+
+Y cambiar la siguiente sentencia:
+
+```
+<socket-binding name="http" port="${jboss.http.port: 8080 }"/>
+```
+
+Por esta:
+
+```
+<socket-binding name="http" port="${jboss.http.port: 8084 }"/>
+```
+
+
+Y le decimos al firewall que permita el tráfico desde el puerto 8084:
+
+```
+sudo ufw allow 8084 /tcp
+```
+
+## 4. Acceso a WildFly:
+
+Tan solo tendremos que colocar en el navegador lo siguiente:
+
+```
+http://localhost/8084
+```
+
+## 5. Añadir usuarios:
+
+Primero creamos al usuario administrador ejecutando el siguiente script:
+
+```
+sudo /opt/wildfly/bin/add-user.sh
+```
+
+Seleccionamos la opción a:
+
+Y seguimos las indicaciones del script:
+
+## 6. Gestionar la consola en remoto:
+
+Primero entramos al archivo de configuración:
+
+```
+sudo nano /etc/wildfly/wildfly.conf
+```
+
+Y debemos añadir esta línea:
+
+```
+WILDFLY_CONSOLE_BIND= 0. 0. 0. 0
+```
+
+Luego entramos a este otro fichero y verificamos que se encuentren estas líneas:
+
+```
+sudo nano /opt/wildfly/bin/launch.sh
+```
+
+```
+$WILDFLY_HOME/bin/domain.sh - c $ 2 - b $ 3 - bmanagement $ 4
+else
+$WILDFLY_HOME/bin/standalone.sh - c $ 2 - b $ 3 - bmanagement $ 4
+```
+Y reiniciamos el servicio para que se vuelva a iniciar con los cambios realizados:
+
+```
+sudo systemctl restart wildfly
+```
+
+Ahora editamos este otro fichero y colocamos lo siguiente:
+
+```
+sudo nano /etc/systemd/system/wildfly.service
+ExecStart=/opt/wildfly/bin/launch.sh $WILDFLY_MODE $WILDFLY_CONFIG $WILDFLY_BIND
+$WILDFLY_CONSOLE_BIND
+```
+
+Reiniciamos el demonio y el servicio:
+
+```
+sudo systemctl daemon-reload
+sudo systemctl restart wildfly
+```
+
+Si queremos también podemos habilitar el acceso remoto a la consola de administraciónmodificando estas líneas en el fichero standalone.xml:
+
+```
+<interfaces>
+<interface name="management">
+<inet-address value="${jboss.bind.address.management: 127. 0. 0. 1 }"/>
+</interface>
+<interface name="public">
+<inet-address value="${jboss.bind.address: 127. 0. 0. 1 }"/>
+</interface>
+</interfaces>
+```
+
+Para ello podemos comentar las etiquetas inet-address o indicar que la IP pública es 0.0.0.
+
