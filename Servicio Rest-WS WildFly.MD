@@ -4,9 +4,9 @@
 
 - 1. <a href="#1-requisitos-previos">Requisitos previos:</a>
 - 2. <a href="#2-instalación-de-los-servicios">Instalación de los servicios:</a>
-   - 2.1. <a href="#2-1-descarga-de-los-ejemplos">Descarga de los ejemplos:</a>
-   - 2.2. <a href="#2-2-instalación-de-servicio-hello-rs">Instalación de Servicio Hello-RS:</a>
-   - 2.3. <a href="#2-3-instalación-de-servicio-hello-ws">Instalación de Servicio Hello-WS:</a>
+   - 2.1. Descarga de los ejemplos:
+   - 2.2. Instalación de Servicio Hello-RS:
+   - 2.3. Instalación de Servicio Hello-WS:
 
 
 ## 1. Requisitos previos:
