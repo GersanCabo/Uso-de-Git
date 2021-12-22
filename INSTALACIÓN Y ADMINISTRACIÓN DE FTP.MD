@@ -18,22 +18,34 @@ Primero actualizamos los repositorios:
 ```
 sudo apt update
 ```
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/FTP/1.1.1.png)
+
 Luego, instalamos el paquete vsftpd:
 
 ```
 sudo apt install - y vsftpd
 ```
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/FTP/1.1.2.png)
+
 A continuación debemos habilitar que se permita el tráfico desde el firewall a los puertos
 predeterminados, para el puerto de comandos tendremos que colocar el siguiente comando:
 
 ```
 sudo ufw allow ftp
 ```
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/FTP/1.1.3.png)
+
 Y para habilitar el puerto de datos sería lo siguiente:
 
 ```
 sudo ufw allow ftp-data
 ```
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/FTP/1.1.4.png)
+
 ## 2. Verificar el servicio FTP
 
 Ahora, desde otra máquina de nuestra red (tengo la máquina con adaptador puente) nos
@@ -46,8 +58,10 @@ creo que lo mejor será realizar la conexión desde la propia terminal:
 ```
 ftpdireccion-ip
 ```
+
 Y nos pedirá el usuario desde el que queremos acceder y la contraseña del mismo.
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/FTP/2.1.1.png)
 
 ## 3. Configurar el servidor FTP
 
@@ -58,6 +72,9 @@ Para instalar FileZilla en nuestro cliente debemos realizar el siguiente comando
 ```
 sudo apt install filezilla
 ```
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/FTP/3.1.1.png)
+
 ### 3.2 Modo Pasivo:
 
 Normalmente la configuración por defecto del servidor FTP en Ubuntu es en modo activo,
@@ -69,16 +86,19 @@ sudo nano /etc/vsftpd.conf
 ```
 Y añadir lo siguiente al final del archivo:
 
+```
 ...
 pasv_enable=YES
 pasv_min_port= 30000
 pasv_max_port= 30050
+```
 
 Y recargamos la configuración del servicio:
 
 ```
 sudo systemctl reload vsftpd
 ```
+
 Por último, activamos el acceso a ese rango de puertos desde el firewall:
 
 ```
@@ -87,6 +107,8 @@ sudo ufw allow 30000 : 30050 /tcp
 
 Y probamos que nos sigue funcionando:
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/FTP/3.2.1.png)
+
 ### 3.3 Seguridad TLS:
 
 En el caso de que queramos acceder con usuarios externos debemos cifrar la conexión,
@@ -94,10 +116,12 @@ pero para que el cifrado funcione correctamente al ingresar con un dominio debem
 primero una serie de certificados autofirmados:
 
 ```
-sudo openssl req - x 509 - newkey rsa: 2048 - days 3650 - nodes - out /etc/ssl/certs/daw.dpl.crt - keyout
-/etc/ssl/private/daw.dpl.key
+sudo openssl req - x 509 - newkey rsa: 2048 - days 3650 - nodes - out /etc/ssl/certs/daw.dpl.crt - keyout /etc/ssl/private/daw.dpl.key
 ```
+
 Una vez ingresado este comando, nos solicitará una serie de datos:
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/FTP/3.3.1.png)
 
 Y ahora debemos editar el archivo vsftpd.conf y buscar lo siguiente:
 
@@ -108,6 +132,8 @@ rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
 rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
 ssl_enable=NO
 ```
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/FTP/3.3.2.png)
 
 Y cambiarlo por:
 
