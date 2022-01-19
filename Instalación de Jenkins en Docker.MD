@@ -27,6 +27,8 @@ Cuando termine la descarga, comprobamos que se haya bajado:
 sudo docker images
 ```
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/JenkinsDocker/1.1.1.png)
+
 ### 1.2. Arrancar la imagen
 
 Ahora ejecutamos un contenedor a partir de esta imagen:
@@ -36,6 +38,8 @@ docker run - p 8080 : 8080 - p 50000 : 50000 - v /home/gersan:/var/jenkins_home 
 ```
 
 Y verificamos que podemos ingresar:
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/JenkinsDocker/1.2.1.png)
 
 Y a partir de aquí podríamos seguir con el punto 5 de la <a href='https://github.com/GersanCabo/Uso-de-Git/blob/main/Instalacion%20y%20configuracion%20de%20Jenkins.MD'>anterior práctica</a>.
 
@@ -108,9 +112,14 @@ docker-compose up - d
 ```
 Y comprobamos que podemos acceder desde el navegador:
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/JenkinsDocker/2.4.1.png)
+
 Para acceder a la contraseña inicial colocamos el siguiente comando:
 
 ```
 docker exec - it jenkinsdocker_master_ 1 cat /var/jenkins_home/secrets/initialAdminPassword
 ```
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/JenkinsDocker/2.4.2.png)
+
 Y a partir de aquí podríamos seguir con el punto 5 de la <a href='https://github.com/GersanCabo/Uso-de-Git/blob/main/Instalacion%20y%20configuracion%20de%20Jenkins.MD'>anterior práctica</a>.
