@@ -2,6 +2,8 @@
 
 Para empezar, creamos la siguiente estructura de directorios:
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/ServicioEmpresa/1.1.1.png)
+
 Y en los archivos ponemos lo siguiente:
 
 - **docker-compose.yml:** En este archivo tenemos declarado el servidor, la base de
@@ -105,10 +107,17 @@ INSERT INTO `Blog` (`id`, `name`) VALUES ( 1 , 'Articulos Java'), ( 2 ,
 
 ## 2. Levantamos los contenedores:
 
-Realizamos un **sudo docker-compose up -d** en el directoriocorrespondiente:
+Realizamos un **sudo docker-compose up -d** en el directorio correspondiente:
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/ServicioEmpresa/2.1.1.png)
 
 Y comprobamos que podemos acceder correctamente desde la maquina local:
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/ServicioEmpresa/2.1.2.png)
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/ServicioEmpresa/2.1.3.png)
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/ServicioEmpresa/2.1.4.png)
 
 Como vemos funciona la página principal y se muestra la frase generada mediante PHP, por
 lo que también se ha realizado correctamente la instalación de PHP.
@@ -128,15 +137,23 @@ Debemos primero activar una serie de modulos de nuestro Apache local:
 sudo a2enmod proxy a2enmod proxy_http a2enmod proxy_ajp a2enmod rewrite a2enmod deflate a2enmod
 headers a2enmod proxy_balancer a2enmod proxy_connect a2enmod proxy_html a2enmod lbmethod_byrequests
 ```
+
 Y reiniciamos Apache:
 
 ```
 systemctl restart apache2
 ```
+
 Ahora debemos editar **etc/apache2/sites-available/000-default.conf** y cambiar lo
 siguiente:
 
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/ServicioEmpresa/3.1.1.png)
+
 Guardamos los cambios y colocamos esta sentencia en **/etc/hosts:**
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/ServicioEmpresa/3.1.2.png)
 
 Con esto, al colocar el dominio nos direccionará a la IP de nuestra máquina que, a su vez,
 nos redireccionará al puerto correspondiente del servidor Docker.
+
+![](https://github.com/GersanCabo/Uso-de-Git/blob/main/img/ServicioEmpresa/3.1.3.png)
